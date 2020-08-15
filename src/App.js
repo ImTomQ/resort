@@ -9,6 +9,35 @@ import Error from "./pages/Error";
 
 import Navbar from "./components/Navbar";
 
+// const routes = [
+//   {
+//     path: "/",
+//     exact: true,
+//     main: () => {
+//       return <Home />;
+//     },
+//   },
+//   {
+//     path: "/rooms",
+//     exact: true,
+//     main: () => {
+//       return <Rooms />;
+//     },
+//   },
+//   {
+//     path: "/rooms/:slug",
+//     exact: true,
+//     main: () => {
+//       return <SingleRoom />;
+//     },
+//   },
+//   {
+//     main: () => {
+//       return <Error />;
+//     },
+//   },
+// ];
+
 function App() {
   return (
     <>
@@ -18,6 +47,14 @@ function App() {
         <Route exact path="/rooms" component={Rooms} />
         <Route exact path="/rooms/:slug" component={SingleRoom} />
         <Route component={Error} />
+        {/* {routes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        ))} */}
       </Switch>
     </>
   );
